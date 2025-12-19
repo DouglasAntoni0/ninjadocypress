@@ -1,39 +1,44 @@
-# 🥋 WebDojo
+# 🥋 WebDojo - Jornada de Automação com Cypress
 
-![WebDojo Cover](.github/cover.png)
+![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
 
-## 🚀 Sobre o Projeto
+## 🚧 Sobre o Projeto
 
-O **WebDojo** é um aplicativo exclusivo para os alunos do **Curso Ninja do Cypress**, ministrado pelo mestre **Fernando Papito**! 🥷💻 Ele foi criado para ser um **campo de treinamento prático**, onde os alunos podem aprimorar suas habilidades em automação de testes com desafios e exercícios focados no **Cypress**.
+Este repositório documenta a minha evolução no **Curso Ninja do Cypress**. Aqui estou aplicando na prática os conceitos de automação de testes End-to-End (E2E).
 
-🛠️ Tecnologias Utilizadas
+O projeto simula uma aplicação real chamada **WebDojo**, e meu objetivo é cobrir as funcionalidades críticas com testes automatizados à medida que avanço nos módulos do curso.
 
-- [x] Git & GitHub 🌍 (Controle de versão e repositório remoto)
-- [x] Bash (Linha de Comando) 💻 (Execução de scripts e comandos)
-- [x] Visual Studio Code 🖥️ (Editor de código recomendado)
-- [x] Node.js (22+) 🟢 (Runtime JavaScript)
-- [x] Gerenciador de pacotes (npm ou yarn) 📦 (Dependências do projeto)
-- [x] Cypress 🧪 (Framework de testes end-to-end)
-- [x] Docker & Docker Compose 🐳 (Ambiente isolado para execução)
-- [x] PostgreSQL 🗄 (Banco de dados relacional)
-- [x] Use Bruno 🔌 (Cliente de API para testes de requisições)
+> **Nota:** Este projeto está em constante evolução. Atualmente, o foco está na automação da interface Web, com integrações de API e orquestração completa via Docker planejadas para as próximas etapas.
 
-## 📖 Como Usar
+## 🚀 O que já foi automatizado (Web)
 
-As instruções detalhadas de instalação e uso do **WebDojo** estão disponíveis dentro do **Curso Ninja do Cypress**.
+Atualmente, a suíte de testes valida os seguintes cenários de Front-end:
 
-🔗 **Acesse o curso e seja Ninja da Automação em Cypress!** 👉 [ninjadocypress.com.br](https://ninjadocypress.com.br)
+- **🔐 Autenticação:** Login (cenários de sucesso e falha).
+- **🖱️ Interações Complexas:**
+  - Uso de **Drag and Drop** (Kanban).
+  - Testes com **Iframes**.
+  - Validação de elementos flutuantes (**Hover** e **Tooltips**).
+- **📂 Arquivos:** Upload e Download de arquivos.
+- **🔗 Navegação:** Validação de links e redirecionamentos.
 
-## ⚠️ Contribuição
+## 🛠️ Tecnologias Atuais
 
-O **WebDojo** é um ambiente **exclusivo** para os alunos do **Curso Ninja do Cypress**, e por isso, **não aceita contribuições externas**.
+- **[Cypress](https://www.cypress.io/):** Ferramenta principal de testes.
+- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript):** Linguagem utilizada nos scripts.
+- **[Node.js](https://nodejs.org/):** Ambiente de execução.
 
-📢 Para suporte e dúvidas, utilize os canais oficiais do curso!
+## 📅 Roadmap (Próximos Passos)
 
-## 🔒 Licença
+Conforme avanço nos estudos, pretendo implementar:
 
-Este projeto é **exclusivo para alunos** do **Curso Ninja do Cypress**. 🚫 O compartilhamento ou distribuição sem autorização é proibido.
+- [ ] 🐳 **Docker:** Configuração completa do ambiente (App + Banco) via containers.
+- [ ] 🔌 **API Testing:** Testes de integração diretamente na API (Backend).
+- [ ] 🔄 **CI/CD:** Pipeline de execução automática (GitHub Actions).
+- [ ] 📊 **Relatórios:** Geração de relatórios de execução (Allure/Mochawesome).
 
-------
+## 📂 Estrutura do Projeto
 
-💙 Feito com dedicação e muito café por **Fernando Papito** e a equipe do **Curso Ninja do Cypress**. 🚀🔥
+A estrutura de pastas reflete o meu progresso atual:
