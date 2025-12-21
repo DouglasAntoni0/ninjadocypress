@@ -1,0 +1,44 @@
+{
+  "personal": {
+    "name": "Fernando Papito",
+    "email": "papito@teste.com.br",
+    "phone": "(11) 99999-1000",
+    "consultancyType": "Individual",
+    "personType": "cpf",
+    "document": "123.456.789-10",
+    "discoveryChannels": [
+      "Instagram",
+      "LinkedIn",
+      "Udemy",
+      "YouTube",
+      "Indicação de Amigo"
+    ],
+    "file": "./cypress/fixtures/linha_do_tempo_restauracao_operacao.pdf",
+    "description": "Gostaria de agendar uma consultoria...",
+    "techs": [
+      "Cypress",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React"
+    ],
+    "terms": true
+  },
+  "company": {
+    "name": "Fernando Papito",
+    "email": "papito@teste.com.br",
+    "phone": "(11) 99999-1000",
+    "consultancyType": "In Company",
+    "personType": "cnpj",
+    "document": "12.728.543/0001-09",
+    "discoveryChannels": [
+      "LinkedIn"
+    ],
+    "file": "./cypress/fixtures/linha_do_tempo_restauracao_operacao.pdf",
+    "description": "Gostaria de agendar uma consultoria...",
+    "techs": [
+      "Cypress"
+    ],
+    "terms": true
+  }
+}
