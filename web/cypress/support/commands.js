@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import 'cypress-real-events'
+import './actions/consuntancy.actions'
 
 Cypress.Commands.add('start', () => {
     cy.visit('http://localhost:3000')
