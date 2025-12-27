@@ -3,3 +3,5 @@ describe('Studio', () => {
     cy.visit('https://example.cypress.io')
   })
 })
+
+//*exemplo
