@@ -6,14 +6,14 @@ describe('Validações de Alertas em JavaScript', () => {
 
   it('Deve validar a mensagem de alerta', () => {
     cy.on('window:alert', (msg) => {
-      expect(msg).to.equal('Olá QA, eu sou uma Alert Box!')
+      expect(msg).to.equal('Olá QA, eu sou um Alert Box!')
     })
     cy.contains('button', 'Mostrar Alert').click()
   })
 
   it('Deve confirmar um dialogo e validar a resposta positiva', () => {
     cy.on('window:confirm', (msg) => {
-      expect(msg).to.equal('Aperta um botão!')
+      expect(msg).to.equal('Aperte um botão!')
       return true // True simula o clique em "OK"
     })
 
@@ -25,7 +25,7 @@ describe('Validações de Alertas em JavaScript', () => {
 
   it('Deve cancelar um dialogo e validar a resposta negativa', () => {
     cy.on('window:confirm', (msg) => {
-      expect(msg).to.equal('Aperta um botão!')
+      expect(msg).to.equal('Aperte um botão!')
       return false // False simula o clique em "Cancelar"
     })
 
@@ -40,7 +40,7 @@ describe('Validações de Alertas em JavaScript', () => {
       cy.stub(win, 'prompt').returns('Douglas')
     })
     cy.on('window:alert', (msg) => {
-      expect(msg).to.equal('Olá Douglas! Boas vindas ao WebDojo!')
+      expect(msg).to.equal('Olá Douglas! Boas-vindas ao WebDojo!')
     })
     cy.contains('button', 'Mostrar Prompt').click()
   })
