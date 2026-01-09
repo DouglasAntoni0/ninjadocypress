@@ -1,8 +1,10 @@
 import 'cypress-real-events'
 import './actions/consultancy.actions'
 
+import { getTodayDate } from '../support/utils'
+
 Cypress.Commands.add('start', () => {
-  cy.visit('http://localhost:3000')
+  cy.visit('/')
 })
 
 Cypress.Commands.add('submitLoginForm', (email, senha) => {
@@ -16,16 +18,6 @@ Cypress.Commands.add('goTo', (buttonName, pageTitle) => {
   cy.contains('h1', pageTitle).should('be.visible')
 })
 
-function getTodayDate() {
-  const today = new Date()
-
-  const day = String(today.getDate()).padStart(2, '0')
-  const month = String(today.getMonth() + 1).padStart(2, '0') // Mês começa no 0, aquele 🤡
-  const year = today.getFullYear()
-
-  return `${day}/${month}/${year}`
-}
-
 Cypress.Commands.add('login', (ui = false) => {
   if (ui === true) {
     cy.start()
@@ -37,7 +29,7 @@ Cypress.Commands.add('login', (ui = false) => {
     cy.setCookie('login_date', loginDate)
 
     // Visita a página já injetando o token no localStorage
-    cy.visit('http://localhost:3000/dashboard', {
+    cy.visit('/dashboard', {
       onBeforeLoad(win) {
         win.localStorage.setItem('token', token)
       }

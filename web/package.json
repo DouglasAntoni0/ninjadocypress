@@ -3,7 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "serve -s dist -p 3000"
+    "dev": "serve -s dist -p 3000",
+    "test": "npx cypress run",
+    "test:login": "npx cypress run --spec cypress/e2e/login.cy.js",
+    "test:cep": "npx cypress run --spec cypress/e2e/cep.cy.js",
+    "test:consultancy": "npx cypress run --spec cypress/e2e/consultancy.cy.js",
+    "test:github": "npx cypress run --spec cypress/e2e/github.cy.js",
+    "test:hovers": "npx cypress run --spec cypress/e2e/hovers.cy.js",
+    "test:iframe": "npx cypress run --spec cypress/e2e/iframe.cy.js",
+    "test:kanban": "npx cypress run --spec cypress/e2e/kanban.cy.js",
+    "test:links": "npx cypress run --spec cypress/e2e/links.cy.js"
   },
   "dependencies": {
     "cypress-real-events": "^1.15.0",
