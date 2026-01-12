@@ -12,7 +12,8 @@
     "test:hovers": "npx cypress run --spec cypress/e2e/hovers.cy.js",
     "test:iframe": "npx cypress run --spec cypress/e2e/iframe.cy.js",
     "test:kanban": "npx cypress run --spec cypress/e2e/kanban.cy.js",
-    "test:links": "npx cypress run --spec cypress/e2e/links.cy.js"
+    "test:links": "npx cypress run --spec cypress/e2e/links.cy.js",
+    "test:login:mobile": "npx cypress run --spec cypress/e2e/login.cy.js --config viewportWidth=414,viewportHeight=896"
   },
   "dependencies": {
     "cypress-real-events": "^1.15.0",
