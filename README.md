@@ -1,44 +1,51 @@
-# 🥋 WebDojo - Jornada de Automação com Cypress
+# 🥋 WebDojo - A Jornada do Ninja do Cypress
 
 ![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Evoluindo%20a%20cada%20café-orange?style=for-the-badge)
 
 ## 🚧 Sobre o Projeto
 
-Este repositório documenta a minha evolução no **Curso Ninja do Cypress**. Aqui estou aplicando na prática os conceitos de automação de testes End-to-End (E2E).
+Bem-vindo ao meu dojo! ⛩️
 
-O projeto simula uma aplicação real chamada **WebDojo**, e meu objetivo é cobrir as funcionalidades críticas com testes automatizados à medida que avanço nos módulos do curso.
+Este repositório é o diário de bordo da minha evolução no **Curso Ninja do Cypress**. Aqui não tem "Hello World" básico não, aqui a gente automatiza a vida real!
 
-> **Nota:** Este projeto está em constante evolução. Atualmente, o foco está na automação da interface Web, com integrações de API e orquestração completa via Docker planejadas para as próximas etapas.
+O **WebDojo** simula uma aplicação completa (Front, Back e Banco), e minha missão é garantir que nada quebre enquanto eu durmo, cobrindo as funcionalidades críticas com testes End-to-End (E2E) robustos.
 
-## 🚀 O que já foi automatizado (Web)
+## 🚀 O que está rolando (Features Automatizadas)
 
-Atualmente, a suíte de testes valida os seguintes cenários de Front-end:
+A suíte de testes já está batendo forte nos seguintes cenários da interface Web:
 
-- **🔐 Autenticação:** Login (cenários de sucesso e falha).
-- **🖱️ Interações Complexas:**
-  - Uso de **Drag and Drop** (Kanban).
-  - Testes com **Iframes**.
-  - Validação de elementos flutuantes (**Hover** e **Tooltips**).
-- **📂 Arquivos:** Upload e Download de arquivos.
-- **🔗 Navegação:** Validação de links e redirecionamentos.
+- **🔐 Autenticação:** Login (porque se não logar, nem adianta testar o resto).
+- **🖱️ Interações de Respeito:**
+  - **Drag and Drop:** Arrastando cards no Kanban como se fosse mágica.
+  - **Iframes:** Entrando em "sites dentro de sites" sem medo.
+  - **Hover & Tooltips:** Caçando elementos que tentam se esconder.
+- **📂 Arquivos:** Upload e Download testados e aprovados.
+- **🔗 Navegação:** Verificando se os links levam para onde devem (e não para o limbo).
 
-## 🛠️ Tecnologias Atuais
+## 🛠️ O Arsenal Tecnológico
 
-- **[Cypress](https://www.cypress.io/):** Ferramenta principal de testes.
-- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript):** Linguagem utilizada nos scripts.
-- **[Node.js](https://nodejs.org/):** Ambiente de execução.
+A stack cresceu! Agora o projeto conta com:
 
-## 📅 Roadmap (Próximos Passos)
+### 🧪 Testes & Front
+- **[Cypress](https://www.cypress.io/):** O dono da festa.
+- **JavaScript:** Porque tipagem estática é para os fracos (brincadeira... ou não).
+- **Node.js:** O motor de tudo.
 
-Conforme avanço nos estudos, pretendo implementar:
+### ⚙️ Backend & Infra (Novidade!)
+- **Docker & Compose:** Ambiente subindo em containers, sem o clássico "na minha máquina funciona".
+- **Express & Prisma:** API moderna para servir os dados.
+- **PostgreSQL:** Banco de dados relacional rodando liso no Docker.
 
-- [ ] 🐳 **Docker:** Configuração completa do ambiente (App + Banco) via containers.
-- [ ] 🔌 **API Testing:** Testes de integração diretamente na API (Backend).
-- [ ] 🔄 **CI/CD:** Pipeline de execução automática (GitHub Actions).
-- [ ] 📊 **Relatórios:** Geração de relatórios de execução (Allure/Mochawesome).
+## 🏃 Como Rodar (Sem dor de cabeça)
 
-## 📂 Estrutura do Projeto
+Quer ver a mágica acontecer na sua máquina? Segue o roteiro:
 
-A estrutura de pastas reflete o meu progresso atual:
+### 1. Subindo a Infraestrutura (Modo Deus)
+Como já temos Docker, você não precisa instalar banco de dados na mão. Só rode:
+
+```bash
+docker-compose up -d
