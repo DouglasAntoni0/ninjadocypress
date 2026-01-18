@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const bcrypt = require('bcryptjs')
-const prisma = require('./prisma')
+const prisma = require('./prismaClient')
 
 const app = express()
 const port = 3333
