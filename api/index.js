@@ -10,13 +10,11 @@ app.use(cors())
 app.use(express.json())
 
 app.use((err, req, res, next) => {
-
   if (err instanceof SyntaxError) {
     return res.status(400).json({ error: 'Invalid JSON format.' })
   }
-
   next()
-} )
+})
 
 app.get('/', (req, res) => {
   res.json({ message: 'API do curso ninja do cypress!' })
@@ -79,7 +77,6 @@ app.post('/api/users/register', async (req, res) => {
     })
   }
 })
-
 
 app.listen(port, () => {
   console.log(`🔥 API rodando na porta ${port}`)

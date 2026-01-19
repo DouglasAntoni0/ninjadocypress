@@ -1,7 +1,6 @@
 import { faker } from '@faker-js/faker'
 
 describe('POST /api/users/register', () => {
-
   it('Deve cadastrar um novo usuário com sucesso', () => {
     const user = {
       name: faker.person.fullName(),
@@ -38,7 +37,6 @@ describe('POST /api/users/register', () => {
   })
 
   context('Validação de campos obrigatórios', () => {
-    
     it('Não deve cadastrar sem o campo email', () => {
       const user = {
         name: faker.person.fullName(),
@@ -71,7 +69,7 @@ describe('POST /api/users/register', () => {
 
       cy.postUser(user).then((response) => {
         expect(response.status).to.eq(400)
-        expect(response.body.error).to.eq('Password field is required') 
+        expect(response.body.error).to.eq('Password field is required')
       })
     })
 
@@ -83,11 +81,9 @@ describe('POST /api/users/register', () => {
       }`
 
       cy.postUser(user).then((response) => {
-
         expect(response.status).to.eq(400)
       })
     })
-
   })
 })
 
