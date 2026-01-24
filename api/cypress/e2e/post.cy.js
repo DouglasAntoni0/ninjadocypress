@@ -1,12 +1,13 @@
-import { faker } from '@faker-js/faker'
 
 describe('POST /api/users/register', () => {
   it('Deve cadastrar um novo usuário com sucesso', () => {
     const user = {
-      name: faker.person.fullName(),
-      email: faker.internet.email(),
+      name: 'Wolverine',
+      email: 'wolverine@teste.com',
       password: '123456'
     }
+
+    cy.task('deleteUser', user.email)
 
     cy.postUser(user).then((response) => {
       expect(response.status).to.eq(201)
@@ -19,10 +20,12 @@ describe('POST /api/users/register', () => {
 
   it('Não deve cadastrar com email duplicado', () => {
     const user = {
-      name: faker.person.fullName(),
-      email: faker.internet.email(),
+      name: 'Cyclops',
+      email: 'cyclops@teste.com',
       password: '123456'
     }
+
+    cy.task('deleteUser', user.email)
 
     // Primeira tentativa: cadastra com sucesso
     cy.postUser(user).then((response) => {
@@ -39,7 +42,7 @@ describe('POST /api/users/register', () => {
   context('Validação de campos obrigatórios', () => {
     it('Não deve cadastrar sem o campo email', () => {
       const user = {
-        name: faker.person.fullName(),
+        name: 'Jean Grey',
         password: '123456'
       }
 
@@ -51,7 +54,7 @@ describe('POST /api/users/register', () => {
 
     it('Não deve cadastrar sem o campo name', () => {
       const user = {
-        email: faker.internet.email(),
+        email: 'storm@xmen.com',
         password: '123456'
       }
 
@@ -63,8 +66,8 @@ describe('POST /api/users/register', () => {
 
     it('Não deve cadastrar sem o campo password', () => {
       const user = {
-        name: faker.person.fullName(),
-        email: faker.internet.email()
+        name: 'Chavier Careca',
+        email: 'chavier@teste.com'
       }
 
       cy.postUser(user).then((response) => {
@@ -87,14 +90,3 @@ describe('POST /api/users/register', () => {
   })
 })
 
-Cypress.Commands.add('postUser', (user) => {
-  return cy.api({
-    method: 'POST',
-    url: 'http://localhost:3333/api/users/register',
-    body: user,
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    failOnStatusCode: false
-  })
-})
