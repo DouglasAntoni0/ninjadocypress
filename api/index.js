@@ -98,6 +98,79 @@ res.status(200).json(users)
 
 })
 
+app.put('/api/users/:id', async (req, res) => {
+  
+
+   const {id} = req.params
+   
+   const {name, email, password} = req.body
+  console.log(req.body)
+
+  if (!name || name.trim() === '') {
+    return res.status(400).json({
+      error: 'Name field is required'
+    })
+  }
+
+  if (!email || email.trim() === '') {
+    return res.status(400).json({
+      error: 'Email field is required'
+    })
+  }
+
+  if (!password || password.trim() === '') {
+    return res.status(400).json({
+      error: 'Password field is required'
+    })
+  }
+
+  try {
+
+    const user = await prisma.user.findUnique({
+      where: {id: Number(id)}
+    })
+    if(!user){
+      return res.status(404).json({error: 'User not found.'})
+    }
+
+    await prisma.user.update({
+      where: { id: Number(id) },
+      data: {name, email, password}
+    })
+
+    res.status(204).end()
+    
+  } catch (error) {
+    res.status(500).json({error: 'Error updating user :('})
+  }
+
+
+})
+
+app.delete('/api/users/:id', async (req, res) => {
+  const {id} = req.params
+
+  try {
+
+   const user = await prisma.user.findUnique({
+      where: {id: Number(id)}
+    })
+
+    if(!user){
+      return res.status(404).json({error: 'User not found.'})
+    }
+
+    await prisma.user.delete({
+      where: {id: Number(id)}
+    })
+    res.status(204).end()
+  } catch (error) {
+    res.status(500).json({error: 'Failed to delete user :('})
+    
+  }
+ 
+})
+
 app.listen(port, () => {
   console.log(`🔥 API rodando na porta ${port}`)
 })
