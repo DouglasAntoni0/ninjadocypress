@@ -19,10 +19,6 @@ describe("Cadastro", () => {
       const email = faker.internet.email();
       const password = "pwp123";
 
-      // cy.log(name)
-      // cy.log(email)
-      // cy.log(password)
-
       cy.get("#name").type(name);
       cy.get("#email").type(email);
       cy.get("#password").type(password);
