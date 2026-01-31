@@ -15,13 +15,7 @@
     ],
     "file": "./cypress/fixtures/linha_do_tempo_restauracao_operacao.pdf",
     "description": "Gostaria de agendar uma consultoria...",
-    "techs": [
-      "Cypress",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "React"
-    ],
+    "techs": ["Cypress", "JavaScript", "HTML", "CSS", "React"],
     "terms": true
   },
   "company": {
@@ -31,14 +25,10 @@
     "consultancyType": "In Company",
     "personType": "cnpj",
     "document": "12.728.543/0001-09",
-    "discoveryChannels": [
-      "LinkedIn"
-    ],
+    "discoveryChannels": ["LinkedIn"],
     "file": "./cypress/fixtures/linha_do_tempo_restauracao_operacao.pdf",
     "description": "Gostaria de agendar uma consultoria...",
-    "techs": [
-      "Cypress"
-    ],
+    "techs": ["Cypress"],
     "terms": true
   }
 }

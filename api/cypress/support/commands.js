@@ -24,48 +24,48 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('postUser', (user) => {
+Cypress.Commands.add("postUser", (user) => {
   return cy.api({
-    method: 'POST',
-    url: '/api/users/register',
+    method: "POST",
+    url: "/api/users/register",
     body: user,
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    failOnStatusCode: false
-  })
-})
+    failOnStatusCode: false,
+  });
+});
 
-Cypress.Commands.add('getUsers', () => {
+Cypress.Commands.add("getUsers", () => {
   return cy.api({
-            method: 'GET',
-            url: '/api/users',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            failOnStatusCode: false
-        })
-})
+    method: "GET",
+    url: "/api/users",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    failOnStatusCode: false,
+  });
+});
 
-Cypress.Commands.add('putUser', (userId, updatedUsers) => {
+Cypress.Commands.add("putUser", (userId, updatedUsers) => {
   return cy.api({
-            method: 'PUT',
-            url: '/api/users/' + userId,
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: updatedUsers, 
-            failOnStatusCode: false
-        })
-})
+    method: "PUT",
+    url: "/api/users/" + userId,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: updatedUsers,
+    failOnStatusCode: false,
+  });
+});
 
-Cypress.Commands.add('deleteUser', (userId) => {
+Cypress.Commands.add("deleteUser", (userId) => {
   return cy.api({
-            method: 'DELETE',
-            url: '/api/users/' + userId,
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            failOnStatusCode: false
-        })
-})
+    method: "DELETE",
+    url: "/api/users/" + userId,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    failOnStatusCode: false,
+  });
+});

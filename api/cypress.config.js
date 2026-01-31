@@ -1,18 +1,18 @@
 const { defineConfig } = require("cypress");
 
-const {deleteUserByEmail} = require('./cypress/support/database')
+const { deleteUserByEmail } = require("./cypress/support/database");
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      on('task', {
+      on("task", {
         deleteUser(email) {
-          return deleteUserByEmail(email)
-        }
-      })
+          return deleteUserByEmail(email);
+        },
+      });
     },
 
-    baseUrl: 'http://localhost:3333',
+    baseUrl: "http://localhost:3333",
   },
 });

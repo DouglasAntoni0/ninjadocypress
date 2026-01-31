@@ -31,11 +31,13 @@ A suíte de testes já está batendo forte nos seguintes cenários da interface 
 A stack cresceu! Agora o projeto conta com:
 
 ### 🧪 Testes & Front
+
 - **[Cypress](https://www.cypress.io/):** O dono da festa.
 - **JavaScript:** Porque tipagem estática é para os fracos (brincadeira... ou não).
 - **Node.js:** O motor de tudo.
 
 ### ⚙️ Backend & Infra (Novidade!)
+
 - **Docker & Compose:** Ambiente subindo em containers, sem o clássico "na minha máquina funciona".
 - **Express & Prisma:** API moderna para servir os dados.
 - **PostgreSQL:** Banco de dados relacional rodando liso no Docker.
@@ -45,7 +47,9 @@ A stack cresceu! Agora o projeto conta com:
 Quer ver a mágica acontecer na sua máquina? Segue o roteiro:
 
 ### 1. Subindo a Infraestrutura (Modo Deus)
+
 Como já temos Docker, você não precisa instalar banco de dados na mão. Só rode:
 
 ```bash
 docker-compose up -d
+```
