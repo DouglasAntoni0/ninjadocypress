@@ -14,7 +14,7 @@ Este repositório demonstra uma estratégia robusta de **Garantia de Qualidade (
 
 O **WebDojo** simula uma aplicação real com Front-end, Back-end (API REST) e Banco de Dados, onde aplico cenários complexos de automação.
 
-### 🎯 Destaques Técnicos (Para Recrutadores)
+### 🎯 Destaques Técnicos
 * **Arquitetura Híbrida:** Testes de API para validação rápida de regras de negócio e Testes E2E para validação de fluxo do usuário.
 * **Ambiente Isolado:** Uso de **Docker Compose** para orquestrar Banco de Dados e ferramentas de administração, garantindo que os testes rodem em qualquer máquina sem conflitos.
 * **Controle de Estado:** Uso de `cy.task` e queries ao banco (Postgres) para criar e limpar massa de dados antes/depois dos testes, garantindo independência e atomicidade.
